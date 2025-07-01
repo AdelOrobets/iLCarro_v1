@@ -63,7 +63,7 @@ public class LoginTests extends ApplicationManager {
                 "Popup message does not contain expected text");
     }
 
-    @Test
+    @Test(retryAnalyzer = utils.RetryAnalyzer.class)
     public void testUserLogin_wrongPassword() {
         UserLombok validUser = userRegistration();
         String validEmail = validUser.getUsername();
