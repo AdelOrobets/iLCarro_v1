@@ -18,8 +18,4 @@ public class PropertiesReader {
             throw new RuntimeException("Unable to read property '" + key + "' from file: " + filePath, e);
         }
     }
-
-    public static String getConfigProperty(String key) {
-        return getProperty("config.properties", key);
-    }
 }
